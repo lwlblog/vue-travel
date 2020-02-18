@@ -40,6 +40,10 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    // 清空全局事件
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
